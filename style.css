@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: "NeueHaasDisplayRoman", Sans-serif;
+    font-weight: normal;
+}
+header{
+    top: 0;
+    position: sticky;
+    display: flex;
+    padding: 25px;
+    justify-content: space-between;
+    background-color: transparent;
+}
+.logo img{
+    width: 121px;
+}
+.hamburger-icon{
+
+}
+.mb20{
+    margin-bottom: 20px;
+}
+.mb10{
+    margin-bottom: 10;
+}
+.ml-auto{
+    margin-left: auto;
+}
+footer{
+    background-color: #000;
+    color: #fff;
+    padding: 20px 25px;
+}
+footer{
+    display: flex;
+    flex-wrap: wrap;
+}
+footer ul{
+    list-style: none;
+    width: 13%;
+}
+footer ul:first-child{
+    width: 15%;
+}
+footer ul:last-child{
+    width: auto;
+}
+footer ul li{
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+footer ul li.grey{
+    color: #7c7c7c;
+}
+footer ul li.grey14{
+    font-size: 14px; 
+    color: #7c7c7c;
+}
+footer .social-icons span{
+    margin-right: 10px;
+    cursor: pointer;
+}
+.desk-only{
+    display: block;
+}
+.mob-only{
+    display: none;
+}
+@media screen and (max-width:768px) {
+    footer ul{
+        flex: 33%;
+    }
+    footer ul:last-child,footer ul:nth-child(4),footer ul:nth-child(5){
+       margin-top: 20px;
+    }
+    .desk-only{
+        display: none;
+    }
+    .mob-only{
+        display: block;
+    }
+}
