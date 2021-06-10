@@ -1,6 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+    text-shadow: none;
+    /* color: #000; */
 }
 
 a {
@@ -11,17 +13,20 @@ a {
 body {
     font-family: "NeueHaasDisplayRoman", Sans-serif;
     font-weight: normal;
+    color: #000;
 }
 header{
     top: 0;
     position: sticky;
     display: flex;
-    padding: 25px;
+    padding: 25px 25px 0;
     justify-content: space-between;
+    z-index: 99;
+    align-items: flex-end;
     background-color: transparent;
 }
 .logo img{
-    width: 121px;
+    width: 119px;
 }
 .hamburger-icon{
 
@@ -43,6 +48,7 @@ footer{
 footer{
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 footer ul{
     list-style: none;

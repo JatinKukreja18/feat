@@ -6,13 +6,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feat</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
     <link href="//db.onlinewebfonts.com/c/02d8bfeaeb805e69f0b04e0f78697ec3?family=NHaasGroteskDSPro-55Rg" rel="stylesheet" type="text/css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <header>
         <span class="logo"><img src="img/feat_artists-logo.png" alt=""></span>
         <span class="hamburger-icon"><img src="img/hamburger-icon.svg" alt=""></span>
     </header>
+    <main class="">
+        <section class="section active" id="slide-1">
+            <div class="feat-home-banner">
+                <div class="feat-home-banner-image">
+                 <img src="./img/img3.png" alt="" srcset="" style="z-index:1">
+                 <img src="./img/img1.png" alt="" srcset="">
+                <img src="./img/img5.jpeg" alt="" srcset="">
+                <img src="./img/img6.jpeg" alt="" srcset="">
+                </div>
+                <div class="feat-home-banner-content">
+                    <div class="tag">FEATURED</div>
+                    <div class="feat-banner-slide-content">
+                        <div class="slide-number">
+                            <span>1</span>
+                            /
+                            <span>5</span>
+                        </div>
+                        <h1 onmouseover="runImageSlideshow(1)">Dolly Devi Photographs Indian Artists For Vogue India</h1>
+                        <a onmouseover="runImageSlideshow(1)">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="slide-2">
+            <div class="feat-home-banner">
+                <div class="feat-home-banner-image">
+                    <img src="./img/img4.jpeg" alt="" srcset="" style="z-index:1">
+                    <img src="./img/img1.png" alt="" srcset="">
+                    <img src="./img/img5.jpeg" alt="" srcset="">
+                    <img src="./img/img6.jpeg" alt="" srcset="">
+
+                </div>
+                <div class="feat-home-banner-content">
+                    <div class="tag">FEATURED</div>
+                    <div class="feat-banner-slide-content">
+                        <div class="slide-number">
+                            <span>2</span>
+                            /
+                            <span>5</span>
+                        </div>
+                        <h1 onmouseover="runImageSlideshow(2)">Dolly Devi Photographs Indian Artists For Vogue India</h1>
+                        <a onmouseover="runImageSlideshow(2)">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="slide-3">
+            <div class="feat-home-banner">
+                <div class="feat-home-banner-image">
+                 <img src="./img/img2.png" alt="" srcset="" style="z-index:1">
+                 <img src="./img/img1.png" alt="" srcset="">
+                    <img src="./img/img5.jpeg" alt="" srcset="">
+                    <img src="./img/img6.jpeg" alt="" srcset="">
+                </div>
+                <div class="feat-home-banner-content">
+                    <div class="tag">FEATURED</div>
+                    <div class="feat-banner-slide-content">
+                        <div class="slide-number">
+                            <span>3</span>
+                            /
+                            <span>5</span>
+                        </div>
+                        <h1 onmouseover="runImageSlideshow(3)">Dolly Devi Photographs Indian Artists For Vogue India</h1>
+                        <a onmouseover="runImageSlideshow(3)">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section static" id="slide-4">
+            <div class="feat-home-banner">
+                <div class="feat-home-banner-image">
+                 <img src="./img/img2.png" alt="" srcset="" style="z-index:1">
+                 <img src="./img/img1.png" alt="" srcset="">
+                    <img src="./img/img5.jpeg" alt="" srcset="">
+                    <img src="./img/img6.jpeg" alt="" srcset="">
+                </div>
+                <div class="feat-home-banner-content">
+                    <div class="tag">FEATURED</div>
+                    <div class="feat-banner-slide-content">
+                        <div class="slide-number">
+                            <span>4</span>
+                            /
+                            <span>5</span>
+                        </div>
+                        <h1 onmouseover="runImageSlideshow(4)">Dolly Devi Photographs Indian Artists For Vogue India</h1>
+                        <a onmouseover="runImageSlideshow(4)">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <section class="section static">
+          <h1>Boring</h1>
+        </section>
+        <section class="section parallax bg2">
+          <h1>Fluffy Kitten</h1>
+        </section> -->
+      </main>
     <footer>
         <ul>
             <li class="grey mb20">Models</li>
@@ -52,5 +152,56 @@
             </li>
         </ul>
     </footer>
+    <script>
+        lastScrollTop = 0
+        $(document).ready(function(){
+            $(window).on('scroll',function(){
+                console.log($(window).scrollTop());
+                console.log(lastScrollTop);
+                if($(window).scrollTop() > lastScrollTop){
+                    goingDown = true;
+                }else{
+                    goingDown = false;
+                }
+                lastScrollTop = $(window).scrollTop();
+                if($('.section:not(.active):not(.static').length){
+                    if($(window).scrollTop() > $('.section:not(.active)').first().offset().top){
+                        $('.section:not(.active)').css('margin-top',0)
+                        $('.section:not(.active)').first().addClass('active')
+                        $('.section:not(.active)').first().css('margin-top',(($('.section.active').length * 100) + 'vh'))
+                    }
+                }
+                if(!goingDown && $('.section.active').length > 1){
+                    console.log(goingDown);
+                    if($(window).scrollTop() <= $('.section:not(.active)').first().offset().top - $(window).height()){
+                        $('.section.active').last().removeClass('active')
+                        $('.section:not(.active)').first().css('margin-top',(($('.section.active').length * 100) + 'vh'))
+                       // $('.section:not(.active)').css('margin-top',0)
+                   }
+                }
+                // else{
+                //     $('.section:not(.active)').first().removeClass('active')
+                // }
+            })
+
+
+
+        })
+        function runImageSlideshow(id){
+            const length = $('#slide-'+id + ' .feat-home-banner-image img').length;
+            count = 1;
+            var imgTimer = setInterval(function(){
+                if(count===length){
+                    $('#slide-'+id + ' .feat-home-banner-image img').css('z-index','0');
+                    $('#slide-'+id + ' .feat-home-banner-image img')[0].style.zIndex = 1;
+                    clearInterval(imgTimer)
+                }else{
+                    $('#slide-'+id + ' .feat-home-banner-image img').css('z-index','0');
+                    $('#slide-'+id + ' .feat-home-banner-image img')[count].style.zIndex = 1;
+                    count +=1;
+                }
+            },500)
+        }
+    </script>
 </body>
 </html>

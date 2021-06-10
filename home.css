@@ -1,0 +1,145 @@
+.feat-home-banner{
+    width: 100%;
+    height: 100%;
+    color: #000;
+    display: flex;
+}
+.feat-home-banner .feat-home-banner-image{
+    height: auto;
+    width: 58.5%;
+    object-fit: cover;
+    height: 100%;
+    position: relative;
+
+}
+.feat-home-banner-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+.feat-home-banner-content{
+    padding: 50px;
+    display: flex;
+    width: calc(100%  - 58.5%);
+    flex-direction: column;
+    /* width: ; */
+    background-color: #fff;
+}
+.feat-home-banner-content .tag{
+    padding-left: 37px;
+    position: relative;
+    font-size: 27px;
+}
+.feat-home-banner-content .tag::before{
+    content: '';
+    position: absolute;
+    left: 0px;
+    width: 17px;
+    height: 17px;
+    background-color: #000;
+    top:50%;
+    transform: translateY(-50%);
+}
+.feat-banner-slide-content{
+    margin-top: auto;
+}
+.feat-banner-slide-content .slide-number{
+    margin-bottom: 10px;
+}
+.feat-banner-slide-content  h1{
+    font-weight: 300;
+    width: 80%;
+    margin-bottom: 50px;
+    font-size: 42px;;
+}
+.feat-banner-slide-content  a{
+    font-size: 24px;
+    text-decoration: underline;
+    font-weight: 300;
+}
+/* .feat-home-banner.has-parallax{
+   position: ;
+} */
+.wrapper {
+    position: relative;
+    /* The height needs to be set to a fixed value for the effect to work.
+     * 100vh is the full height of the viewport. */
+    /* height: 100vh; */
+    /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+    /* overflow-x: hidden; */
+    /* Enable scrolling on the page. */
+    /* overflow-y: hidden; */
+    /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+    /* perspective: 2px; */
+  }
+  .sect{
+   /* Needed for children to be absolutely positioned relative to the parent. */
+   position: relative;
+   /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+   height: 100vh;
+ 
+   /* For text formatting. */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   text-shadow: 0 0 5px #000;   
+  }
+  .section {
+    /* Needed for children to be absolutely positioned relative to the parent. */
+    position: relative;
+    /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+    height: 100vh;
+  
+    /* For text formatting. */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    /* z-index: -1; */
+    text-shadow: 0 0 5px #000;
+  }
+  .section.active{
+      position: fixed;
+      top: 0;
+      width: 100%;
+  }
+    .section:not(.active){
+        margin-top: 100vh;
+    }
+    .section.active:last-of-type{
+        z-index: 1;
+    }
+  /* .parallax::after {
+    /* Display and position the pseudo-element 
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  
+    /* Move the pseudo-element back away from the camera,
+     * then scale it back up to fill the viewport.
+     * Because the pseudo-element is further away, it appears to move more slowly, like in real life. /
+    transform: translateZ(-1px) scale(1.5);
+    /* Force the background image to fill the whole element. /
+    background-size: 100%;
+    /* Keep the image from overlapping sibling elements. /
+    z-index: -1;
+  } */
+  
+  /* The styling for the static div. */
+  .static {
+    background: red;
+  }
+  
+  /* Sets the actual background images to adorable kitties. This part is crucial. */
+  .bg1::after {
+    background-image: url("https://placekitten.com/g/900/700");
+  }
+  
+  .bg2::after {
+    background-image: url("https://placekitten.com/g/800/600");
+  }
