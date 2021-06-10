@@ -18,6 +18,21 @@
     object-fit: cover;
     position: absolute;
 }
+.feat-home-banner.full .feat-home-banner-image{
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+.feat-home-banner.full .feat-home-banner-image img{
+    width: 100%;
+    height: auto;
+}
+.feat-home-banner.full  .feat-home-banner-content{
+    background-color: transparent;
+    margin-left: 54%;
+    z-index: 1;
+    color: #fff;
+}
 .feat-home-banner-content{
     padding: 50px;
     display: flex;
@@ -37,7 +52,7 @@
     left: 0px;
     width: 17px;
     height: 17px;
-    background-color: #000;
+    background-color: currentColor;
     top:50%;
     transform: translateY(-50%);
 }
