@@ -2,14 +2,7 @@
     margin: 0;
     padding: 0;
     text-shadow: none;
-    /* color: #000; */
 }
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
 body {
     font-family: "NeueHaasDisplayRoman", Sans-serif;
     font-weight: normal;
@@ -29,13 +22,13 @@ header{
     width: 119px;
 }
 .hamburger-icon{
-
+    cursor: pointer;
 }
 .mb20{
     margin-bottom: 20px;
 }
 .mb10{
-    margin-bottom: 10;
+    margin-bottom: 10px;
 }
 .ml-auto{
     margin-left: auto;
