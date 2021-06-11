@@ -1,3 +1,15 @@
+@font-face {
+    font-family: "NeueHaasDisplayRoman";
+    src: url("/fonts/neue-haas-grotesk-display-pro-cufonfonts-webfont/NeueHaasDisplayThin.woff");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "NeueHaasDisplayXThin";
+    src: url("/fonts/neue-haas-grotesk-display-pro-cufonfonts-webfont/NeueHaasDisplayXXThin.woff");
+    font-weight: 100;
+    font-style: normal;
+}
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +17,6 @@
 }
 body {
     font-family: "NeueHaasDisplayRoman", Sans-serif;
-    font-weight: normal;
     color: #000;
 }
 header{
@@ -15,14 +26,17 @@ header{
     padding: 25px 25px 0;
     justify-content: space-between;
     z-index: 99;
-    align-items: flex-end;
+    align-items: center;
     background-color: transparent;
 }
 .logo img{
-    width: 119px;
+    width: 121px;
 }
 .hamburger-icon{
     cursor: pointer;
+}
+.hamburger-icon img{
+    vertical-align: top;
 }
 .mb20{
     margin-bottom: 20px;
@@ -75,6 +89,12 @@ footer .social-icons span{
     display: none;
 }
 @media screen and (max-width:768px) {
+    footer{
+        padding: 20px 15px;
+    }
+    header{
+        padding: 25px 15px;
+    }
     footer ul{
         flex: 33%;
     }
@@ -86,5 +106,8 @@ footer .social-icons span{
     }
     .mob-only{
         display: block;
+    }
+    .logo img{
+        width: 85px;
     }
 }
