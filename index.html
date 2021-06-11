@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="home.css">
     <link href="https://db.onlinewebfonts.com/c/02d8bfeaeb805e69f0b04e0f78697ec3?family=NHaasGroteskDSPro-55Rg" rel="stylesheet" type="text/css"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./utils.js"></script>
 </head>
 <body>
     <header>
@@ -84,7 +85,7 @@
                 </div>
             </div>
         </section>
-        <section class="section static" id="slide-4">
+        <section class="section " id="slide-4">
             <div class="feat-home-banner gray-box">
                 <div class="feat-home-banner-image">
                     <div class="feat-aspect-container">
@@ -106,6 +107,28 @@
                         </div>
                         <h1 onmouseover="runImageSlideshow(4)" onmouseout="stopImageSlideshow()">Dolly Devi Photographs Indian Artists For Vogue India</h1>
                         <a onmouseover="runImageSlideshow(4)"  onmouseout="stopImageSlideshow()">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section static" id="slide-5">
+            <div class="feat-home-banner">
+                <div class="feat-home-banner-image">
+                 <img src="./img/img1.png" alt="" srcset="" style="z-index:1">
+                 <img src="./img/img2.png" alt="" srcset="">
+                    <img src="./img/img5.jpeg" alt="" srcset="">
+                    <img src="./img/img6.jpeg" alt="" srcset="">
+                </div>
+                <div class="feat-home-banner-content">
+                    <div class="tag">NEWLY LAUNCHED</div>
+                    <div class="feat-banner-slide-content">
+                        <div class="slide-number">
+                            <span>5</span>
+                            /
+                            <span>5</span>
+                        </div>
+                        <h1 onmouseover="runImageSlideshow(3)" onmouseout="stopImageSlideshow()">Dolly Devi Photographs Indian Artists For Vogue India</h1>
+                        <a onmouseover="runImageSlideshow(3)" onmouseout="stopImageSlideshow()">Explore</a>
                     </div>
                 </div>
             </div>
@@ -160,10 +183,9 @@
         lastScrollTop = 0
         $(document).ready(function(){
             $(window).on('scroll',function(e){
-                console.log($(window).scrollTop());
-                console.log(lastScrollTop);
                 if($(window).scrollTop() > lastScrollTop){
                     goingDown = true;
+                    
                     // $(window).scrollTop($('.section:not(.active)')[0].offsetTop)
                     // $("html, body").animate({ scrollTop: $('.section:not(.active)')[0].offsetTop }, 600);
                     // $('.section:not(.active)').css('margin-top',0)
@@ -197,7 +219,76 @@
 
 
 
+            // window.addEventListener('scroll',scrollHandler);
+            // window.addEventListener(wheelEvent, throttle(scrollHandler, 300));
+            // window.addEventListener('keydown', keyDownHandler);
+            
+            var scrollTimer = -1;
+            var isScrolledFinished = false;
+            function scrollHandler(e){
+                // console.log(e.preventDefault);
+
+                // if (scrollTimer != -1)
+                //     clearTimeout(scrollTimer);
+                    
+                // scrollTimer = window.setTimeout(scrollFinished, 300);
+                changeActiveSlide('down');
+                
+                // if (window.innerWidth > 767) {
+                    // }
+            }
+            $(window).one('scroll',function() {
+                // Stuff
+                console.log('working once');
+                changeActiveSlide(goingDown);
+            });
+            function reinitiateSingleScroll(){
+                $(window).one('scroll',function() {
+                    // Stuff
+                    changeActiveSlide(goingDown);
+                    console.log('working twice');
+                });
+            }
+            // function scrollFinished() {
+            //     console.log(isScrolledFinished);
+            //     isScrolledFinished = true;
+            //     if( $(window).scrollTop() != $('section:not(.active)').first().offset().top){
+            //     }
+            // }
+            function changeActiveSlide(direction){
+                if(window.pageYOffset < $('section.static').first().offset().top){
+                        if(direction){
+                            console.log(direction);
+                            $("html, body").animate({ scrollTop: $('section:not(.active)').first().offset().top }, 300,function(){
+                                console.log('animation stopped');
+                            });
+                            $('html body').css('overflow','hidden')
+                            setTimeout(function() {
+                                $('html body').css('overflow','auto')
+                                reinitiateSingleScroll();
+                            }, 800);
+                        }
+                        if(direction == false){
+                            $("html, body").animate({ scrollTop: $('section:not(.active)').first().offset().top - $(window).height() }, 300,function(){
+                                console.log('animation stopped');
+                            
+                            });
+                            $('html body').css('overflow','hidden')
+                            setTimeout(function() {
+                                $('html body').css('overflow','auto')
+                                reinitiateSingleScroll();
+                            }, 800);
+                        }
+                }else{
+                    reinitiateSingleScroll();
+                }
+            }
         })
+
+
+        
+
+
         var imgTimer;
         function stopImageSlideshow(id){
             clearInterval(imgTimer)

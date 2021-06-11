@@ -16,10 +16,29 @@
     box-sizing: border-box;
     text-shadow: none;
 }
+/* body,html{
+    overflow: hidden;
+} */
 body {
     font-family: "NeueHaasDisplayRoman", Sans-serif;
     color: #000;
 }
+body,html {
+    overflow: auto;
+    /* this will hide the scrollbar in mozilla based browsers */
+    overflow: -moz-scrollbars-none;
+    scrollbar-width: none;
+    /* this will hide the scrollbar in internet explorers */
+    -ms-overflow-style: none;
+    scrollbar-color: transparent transparent;
+
+  }
+  
+  /* this will hide the scrollbar in webkit based browsers - safari, chrome, etc */
+  body::-webkit-scrollbar { 
+    width: 0 !important;
+    display: none; 
+  }
 header{
     top: 0;
     position: fixed;
