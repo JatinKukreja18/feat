@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="home.css">
     <link href="//db.onlinewebfonts.com/c/02d8bfeaeb805e69f0b04e0f78697ec3?family=NHaasGroteskDSPro-55Rg" rel="stylesheet" type="text/css"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="./fonts/neue-haas-grotesk-display-pro-cufonfonts-webfont/style.css">
 </head>
 <body>
     <header>
@@ -97,8 +97,8 @@
                             /
                             <span>5</span>
                         </div>
-                        <h1 onmouseover="runImageSlideshow(4)">Dolly Devi Photographs Indian Artists For Vogue India</h1>
-                        <a onmouseover="runImageSlideshow(4)">Explore</a>
+                        <h1 onmouseover="runImageSlideshow(4)" onmouseout="stopImageSlideshow()">Dolly Devi Photographs Indian Artists For Vogue India</h1>
+                        <a onmouseover="runImageSlideshow(4)"  onmouseout="stopImageSlideshow()">Explore</a>
                     </div>
                 </div>
             </div>
@@ -184,19 +184,24 @@
 
 
         })
+        var imgTimer;
+        function stopImageSlideshow(id){
+            clearInterval(imgTimer)
+        }
         function runImageSlideshow(id){
             const length = $('#slide-'+id + ' .feat-home-banner-image img').length;
             count = 1;
-            var imgTimer = setInterval(function(){
+            imgTimer = setInterval(function(){
                 if(count===length){
-                    $('#slide-'+id + ' .feat-home-banner-image img').css('z-index','0');
-                    $('#slide-'+id + ' .feat-home-banner-image img')[0].style.zIndex = 1;
-                    clearInterval(imgTimer)
-                }else{
-                    $('#slide-'+id + ' .feat-home-banner-image img').css('z-index','0');
-                    $('#slide-'+id + ' .feat-home-banner-image img')[count].style.zIndex = 1;
-                    count +=1;
+                    count = 0;
+                    // $('#slide-'+id + ' .feat-home-banner-image img').css('z-index','0');
+                    // $('#slide-'+id + ' .feat-home-banner-image img')[0].style.zIndex = 1;
+                    
                 }
+                $('#slide-'+id + ' .feat-home-banner-image img').css('z-index','0');
+                $('#slide-'+id + ' .feat-home-banner-image img')[count].style.zIndex = 1;
+                count +=1;
+            
             },500)
         }
     </script>
