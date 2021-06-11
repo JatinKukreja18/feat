@@ -44,7 +44,7 @@
 .feat-home-banner-content .tag{
     padding-left: 37px;
     position: relative;
-    font-size: 27px;
+    font-size: 24px;
 }
 .feat-home-banner-content .tag::before{
     content: '';
@@ -61,12 +61,14 @@
 }
 .feat-banner-slide-content .slide-number{
     margin-bottom: 10px;
+    font-size: 24px;
 }
 .feat-banner-slide-content  h1{
     font-weight: 300;
     width: 80%;
     margin-bottom: 50px;
-    font-size: 42px;;
+    font-family: 'NeueHaasDisplayXThin';
+    font-size: 42px;
 }
 .feat-banner-slide-content  a{
     font-size: 24px;
@@ -173,7 +175,7 @@
         position: relative;
     }
     .feat-home-banner-content {
-        padding: 30px 15px;
+        padding: 50px 15px;
         /* display: flex; */
         position: relative;
         flex: 37%;
@@ -193,23 +195,28 @@
     section{
         background-color: #fff;
     }
-    .feat-home-banner-content .tag,.feat-banner-slide-content a{
-        font-size: 18px;
-    }
     .feat-home-banner-content .tag::before{
-        left: 50px;
+        left: 40px;
     }
     .feat-home-banner-content .tag{
-        padding-left: 75px;
+        padding-left: 65px;
     }
     .slide-number{
         position: absolute;
-        top: 30px;
+        top: 50px;
+    }
+    footer .social-icons span{
+        margin-right: 20px;
     }
     .feat-banner-slide-content h1{
         font-size: 24px;
         font-weight: 100;
-        line-height: 1.17;
+        line-height: 28px;
         margin-top: 15px;
+        margin-bottom: 25px;
+    }
+    .feat-banner-slide-content .slide-number,.feat-home-banner-content .tag,.feat-home-banner-content .tag, .feat-banner-slide-content a{
+        font-size: 18px;
+        line-height: 28px;
     }
 }
