@@ -17,12 +17,16 @@
     </header>
     <main class="">
         <section class="section active" id="slide-1">
-            <div class="feat-home-banner">
+            <div class="feat-home-banner gray-box">
                 <div class="feat-home-banner-image">
-                 <img src="./img/img2.png" alt="" srcset="" style="z-index:1">
-                 <img src="./img/img1.png" alt="" srcset="">
-                <img src="./img/img5.jpeg" alt="" srcset="">
-                <img src="./img/img6.jpeg" alt="" srcset="">
+                    <div class="feat-aspect-container">
+                        <div class="aspect-4-3">
+                            <img src="./img/img3.png" alt="" srcset="" style="z-index:1">
+                            <img src="./img/img1.png" alt="" srcset="">
+                           <img src="./img/img5.jpeg" alt="" srcset="">
+                           <img src="./img/img6.jpeg" alt="" srcset="">
+                        </div>
+                    </div>
                 </div>
                 <div class="feat-home-banner-content">
                     <div class="tag">FEATURED</div>
@@ -61,8 +65,8 @@
         <section class="section" id="slide-3">
             <div class="feat-home-banner">
                 <div class="feat-home-banner-image">
-                 <img src="./img/img2.png" alt="" srcset="" style="z-index:1">
-                 <img src="./img/img1.png" alt="" srcset="">
+                 <img src="./img/img1.png" alt="" srcset="" style="z-index:1">
+                 <img src="./img/img2.png" alt="" srcset="">
                     <img src="./img/img5.jpeg" alt="" srcset="">
                     <img src="./img/img6.jpeg" alt="" srcset="">
                 </div>
@@ -81,12 +85,16 @@
             </div>
         </section>
         <section class="section static" id="slide-4">
-            <div class="feat-home-banner">
+            <div class="feat-home-banner gray-box">
                 <div class="feat-home-banner-image">
-                 <img src="./img/img2.png" alt="" srcset="" style="z-index:1">
-                 <img src="./img/img1.png" alt="" srcset="">
-                    <img src="./img/img5.jpeg" alt="" srcset="">
-                    <img src="./img/img6.jpeg" alt="" srcset="">
+                    <div class="feat-aspect-container">
+                        <div class="aspect-4-3">
+                            <img src="./img/img6.jpeg" alt="" srcset="" style="z-index:1">
+                            <img src="./img/img1.png" alt="" srcset="">
+                           <img src="./img/img5.jpeg" alt="" srcset="">
+                           <img src="./img/img4.jpeg" alt="" srcset="">
+                        </div>
+                    </div>
                 </div>
                 <div class="feat-home-banner-content">
                     <div class="tag">FEATURED</div>
@@ -151,11 +159,18 @@
     <script>
         lastScrollTop = 0
         $(document).ready(function(){
-            $(window).on('scroll',function(){
+            $(window).on('scroll',function(e){
                 console.log($(window).scrollTop());
                 console.log(lastScrollTop);
                 if($(window).scrollTop() > lastScrollTop){
                     goingDown = true;
+                    // $(window).scrollTop($('.section:not(.active)')[0].offsetTop)
+                    // $("html, body").animate({ scrollTop: $('.section:not(.active)')[0].offsetTop }, 600);
+                    // $('.section:not(.active)').css('margin-top',0)
+                    // $('.section:not(.active)').first().addClass('active')
+                    // $('.section:not(.active)').first().css('margin-top',(($('.section.active').length * 100) + 'vh'))
+                    // console.log('came here');
+                    // e.stopPropagation();
                 }else{
                     goingDown = false;
                 }

@@ -13,6 +13,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     text-shadow: none;
 }
 body {
@@ -21,7 +22,8 @@ body {
 }
 header{
     top: 0;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     display: flex;
     padding: 25px 25px 0;
     justify-content: space-between;
@@ -88,6 +90,20 @@ footer .social-icons span{
 .mob-only{
     display: none;
 }
+/* aspect ratio containers*/
+
+.aspect-4-3{
+    position: relative;
+    padding-top: 133.333%;
+}
+.aspect-4-3 img{
+    position: absolute;
+    height: 100%;
+    width: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+}
 @media screen and (max-width:768px) {
     footer{
         padding: 20px 15px;
@@ -109,5 +125,11 @@ footer .social-icons span{
     }
     .logo img{
         width: 85px;
+    }
+    .aspect-4-3{
+        padding-top: 116.66%;
+    }
+    .aspect-4-3 img{
+        width: 100%;
     }
 }

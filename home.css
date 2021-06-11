@@ -18,6 +18,7 @@
     object-fit: cover;
     position: absolute;
 }
+/* full banner */
 .feat-home-banner.full .feat-home-banner-image{
     width: 100%;
     position: absolute;
@@ -32,6 +33,13 @@
     margin-left: 54%;
     z-index: 1;
     color: #fff;
+}
+/* gray box banner */
+.feat-home-banner.gray-box .feat-home-banner-image{
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .feat-home-banner-content{
     padding: 50px;
@@ -78,6 +86,9 @@
 /* .feat-home-banner.has-parallax{
    position: ;
 } */
+.feat-aspect-container{
+    width: 55%;
+}
 .wrapper {
     position: relative;
     /* The height needs to be set to a fixed value for the effect to work.
@@ -161,7 +172,11 @@
     background-image: url("https://placekitten.com/g/800/600");
   }
 
-  @media screen and (max-width:768px) {
+  @media screen and (max-width:767px) {
+    .feat-home-banner-content .tag::before{
+        width: 13px;
+        height: 13px;
+    }
     .feat-home-banner {
         flex-direction: column;
         flex-wrap: wrap;
@@ -174,12 +189,21 @@
         height: 50%;
         position: relative;
     }
+    .feat-home-banner.gray-box .feat-home-banner-image{
+        display: block;
+    }
+    .feat-aspect-container{
+        width: 100%;
+    }
     .feat-home-banner-content {
         padding: 50px 15px;
         /* display: flex; */
-        position: relative;
-        flex: 37%;
-        width: auto;
+        position: absolute;
+        bottom: 1;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
         background-color: #fff;
     }
     .feat-home-banner.full .feat-home-banner-content{
@@ -199,7 +223,7 @@
         left: 40px;
     }
     .feat-home-banner-content .tag{
-        padding-left: 65px;
+        padding-left: 60px;
     }
     .slide-number{
         position: absolute;
@@ -219,4 +243,8 @@
         font-size: 18px;
         line-height: 28px;
     }
+    /* .feat-home-banner-image img:first-of-type{
+        position: relative;
+        width: 100;
+    } */
 }
