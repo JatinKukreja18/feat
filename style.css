@@ -1,12 +1,12 @@
 @font-face {
     font-family: "NeueHaasDisplayRoman";
-    src: url("/fonts/neue-haas-grotesk-display-pro-cufonfonts-webfont/NeueHaasDisplayThin.woff");
+    src: url("./fonts/neue-haas-grotesk-display-pro-cufonfonts-webfont/NeueHaasDisplayThin.woff");
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
     font-family: "NeueHaasDisplayXThin";
-    src: url("/fonts/neue-haas-grotesk-display-pro-cufonfonts-webfont/NeueHaasDisplayXXThin.woff");
+    src: url("./fonts/neue-haas-grotesk-display-pro-cufonfonts-webfont/NeueHaasDisplayXXThin.woff");
     font-weight: 100;
     font-style: normal;
 }
