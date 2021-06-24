@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="models.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
 </head>
 <body>
     <header class="secondary">
@@ -30,7 +29,7 @@
                 </li>
             </ul>
         </span>
-        <span class="hamburger-icon"><img src="img/hamburger-icon.svg" alt=""></span>
+        <span class="hamburger-icon toggle"><img src="img/hamburger-icon.svg" alt=""></span>
     </header>
     <section class="container model-interior">
         <div class="left-half">
@@ -56,6 +55,87 @@
             </article>
         </div>
       </section>
+      <div class="overlay" id="overlay">
+        <span class="hamburger-back"><img src="img/back.svg"></span>
+          <span class="toggle"><img src="img/cross.svg"></span>
+        <nav class="overlay-menu">
+            <ul class="first">
+                <li><a href="#">Models</a></li>
+                <li><a href="#">Talents</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Search</a></li>
+
+            </ul>
+            <ul class="second">
+                <li>
+                    <a href="#">ALL</a>
+                    <img src="img/hamburger-boys.png"/>
+                </li>
+                <li>
+                    <a href="#">Boys</a>
+                    <img src="img/hamburger-boys.png"/>
+                </li>
+                <li>
+                    <a href="#">Girls</a>
+                    <img src="img/hamburger-girls.png"/>
+                </li>
+                <li>
+                    <a href="#">Queer</a>
+                    <img src="img/hamburger-girls.png"/>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+    $(document).ready(function(){
+        $('.toggle').click(function() {
+            // $(this).toggleClass('active');
+            $('#overlay').toggleClass('open');
+        });
+            if( document.documentElement.clientWidth < 768) {
+
+            $('.overlay-menu ul.first li').on('click', function(e) {
+                e.preventDefault();
+                $('.overlay-menu ul.first').addClass("hide-mobile");
+                $('.overlay-menu ul.second').addClass( "show" );
+                $('#overlay').addClass("change-background");
+            });
+            $('.hamburger-back').on('click', function(e) {
+                e.preventDefault();
+                $('.overlay-menu ul.first').removeClass("hide-mobile");
+                $('.overlay-menu ul.second').removeClass( "show" );
+                $('#overlay').removeClass("change-background");
+            });
+            }
+        $('.overlay-menu ul.first li').hover(
+            function() {
+            $('.overlay-menu ul.second').addClass( "show" );
+            // $('.overlay-menu ul.first').addClass("hide-mobile");
+        }, function() {
+            $('.overlay-menu ul.second').removeClass( "show" );
+        });
+        $('.overlay-menu ul.second').hover(
+            function() {
+            $(this).addClass( "show" );
+        }, function() {
+            $(this).removeClass( "show" );
+        });
+     /*Bind an event handler to the "resize"*/
+
       
+
+
+    });
+   
+//    $('.overlay-menu ul.second li').hover(
+//     function() {
+//     $('.overlay-menu ul.second').addClass( "show" );
+//   }, function() {
+//     $('.overlay-menu ul.second').removeClass( "show" );
+//    });
+    </script>
 </body>
 </html>

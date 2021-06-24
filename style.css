@@ -137,6 +137,133 @@ footer .social-icons span{
     left: 0;
     right: 0;
 }
+.uppercase{
+    text-transform: uppercase;
+}
+
+/*hamburger*/
+  #overlay .toggle{
+      /* position:absolute;
+      top:72px;
+      right:72px */
+      float: right;
+      margin: 70px 70px 0 0;
+      cursor: pointer;
+  }
+  .overlay {
+    position: fixed;
+    background: #fff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+    z-index: 100;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+  }
+  .overlay.open {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+  }
+  .overlay.open li {
+    animation: fadeInRight .5s ease forwards;
+    animation-delay: .35s;
+  }
+  /* .overlay.open li:nth-of-type(2) {
+    animation-delay: .4s;
+  }
+  .overlay.open li:nth-of-type(3) {
+    animation-delay: .45s;
+  }
+  .overlay.open li:nth-of-type(4) {
+    animation-delay: .50s;
+  } */
+  .overlay nav {
+    position: relative;
+    height: auto;
+    top: 60%;
+    transform: translateY(-50%);
+    font-size: 36px;
+    font-weight: 400;
+    padding: 0 70px;
+  }
+  .overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+  }
+  .overlay-menu ul.second{
+      padding-left: 200px;
+      position: absolute;
+      display: none;
+      margin-top: 0;
+  }
+  .overlay-menu ul.second.show{
+    display: inline-block;
+}
+.overlay-menu ul.second li img{
+    display: none;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: -40px;
+    left: 150%;
+}
+.overlay-menu ul.second li:hover img{
+    display:block;
+}
+  .overlay ul li {
+    display: block;
+    margin-bottom: 30px;
+    /* position: relative; */
+    opacity: 0;
+  }
+  .overlay ul li a {
+    display: block;
+    position: relative;
+    color: #000;
+    font-family: 'NeueHaasDisplayXThin';
+    text-decoration: none;
+    overflow: hidden;
+  }
+  .overlay ul li a:hover,.overlay ul li a:focus {
+    width: 100%;
+    font-weight: bold;
+  }
+  .hamburger-back{
+      display: none;
+  }
+  /* .overlay ul li a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    transform: translateX(-50%);
+    height: 3px;
+    background: #000;
+    transition: .35s;
+  } */
+  
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      left: 20%;
+    }
+    100% {
+      opacity: 1;
+      left: 0;
+    }
+  }
+  .change-background{
+      background-color: #ac5c44;
+  }
 @media screen and (max-width:768px) {
     footer{
         padding: 20px 15px;
@@ -165,4 +292,34 @@ footer .social-icons span{
     .aspect-4-3 img{
         width: 100%;
     }
+    /*hamburger*/
+    .overlay nav {
+        position: relative;
+        height: auto;
+        top: 0;
+        transform: translateY(0%);
+        margin-top: 165px;
+        font-size: 36px;
+        font-weight: 400;
+        padding: 0 70px;
+      }
+    .overlay-menu ul.first.hide-mobile,.overlay-menu ul.second img,.overlay-menu ul.second li:hover img{
+        display: none;
+    }
+    .hamburger-back{
+        display: block;
+        float: left;
+    margin: 70px 0px 0 70px;
+    cursor: pointer;
+    }
+    .overlay-menu ul.second.show li a{ 
+        color: #fff;
+    }
+    .overlay-menu ul.second.show{
+        left:0;
+        position: relative;
+        padding-left: 0px;
+       
+    }
+    
 }
