@@ -71,6 +71,9 @@ header{
 .hamburger-icon img{
     vertical-align: top;
 }
+.mb50{
+    margin-bottom: 50px;
+}
 .mb20{
     margin-bottom: 20px;
 }
@@ -86,6 +89,7 @@ header{
 footer{
     background-color: #000;
     color: #fff;
+    width: 100%;
     padding: 20px 25px;
 }
 footer{

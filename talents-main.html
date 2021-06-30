@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="models.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header class="secondary">
+        <span class="logo featonly"><a href="index.html"><img src="img/feat-logo.png" alt=""></a></span>
+        <span class="model-name uppercase">Bikramjit Bose</span>
+            <ul class="breadcrumb">
+              
+                <li>
+                    <a href="#">
+                        Photographer
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#">
+                        Bikramjit Bose
+                    </a>
+                </li>
+            </ul>
+        </span>
+        <span class="hamburger-icon"><img src="img/hamburger-icon.svg" alt=""></span>
+    </header>
+    <section class="container talents-interior">
+      <div class="talents-main-banner-cont">
+          <img class="full-width screen-height" src="img/download.jpeg">
+          <div class="content-over-image">
+            <div class="tag">Newly Launched</div>
+              <h1 onmouseover="runImageSlideshow(3)" onmouseout="stopImageSlideshow()">Title of project lorem ipsum dolor sit amet, consectetur adipiscing</h1>
+              <a onmouseover="runImageSlideshow(3)" onmouseout="stopImageSlideshow()">Discover</a>
+          </div>
+      </div>
+      <div class="gallery">
+          <div class="featured">
+              <img src="img/featured-img.png"/>
+          </div>
+          <div class="type-1">
+          <div class="small-gal-image">
+              <img src="img/grey-img.png"/>
+          </div>
+          <div class="small-gal-image">
+            <img src="img/grey-img.png"/>
+        </div>
+        <div class="medium-gal-image">
+            <img src="img/grey-img.png"/>
+        </div>
+        </div>
+        <div class="type-2">
+        <div class="medium-gal-image">
+            <img src="img/grey-img.png"/>
+        </div>
+        <div class="small-gal-image">
+            <img src="img/grey-img.png"/>
+        </div>
+        <div class="small-gal-image">
+            <img src="img/grey-img.png"/>
+        </div>
+        </div>
+        <div class="large-gal-image">
+            <img src="img/grey-img.png"/>
+        </div>
+      </div>
+      <div class="talents-details">
+        <div class="talents-details-link">
+            See:
+            <div class="talents-details-link-list">
+                <ul>
+                    <li>
+                        Documentary
+                    </li>
+                    <li>
+                        Portraits
+                    </li>
+                    <li>
+                        Vogue
+                    </li>
+                    <li>
+                        Jewellery
+                    </li>
+                    <li>
+                        Editorial
+                    </li>
+                    <li>
+                        Lookbook
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="talents-details-readmore-cont">
+            A student of Srishti School of Art, Design and Technology in Bangalore in 2007, Bikramjit moved to Mumbai in 2008. Soon he started contributing to magazines like Elle, Vogue, Harper’s Bazaar, Marie Claire, Grazia, Rolling Stone, Verve and GQ India more recently shooting covers for all the publications.<br/><br/>
+
+            While, his pared-down aesthetic sensibilities are reflected in his portraits, he also draws a lot of inspiration from cinema and the works of  cinematographers, which in turn, he seeks to reflect in his fashion stories.<br/><br/>
+            
+            With a bank of campaigns under his belt , Bikramjit has managed to bring a human element to all of his advertising work Internationally and within India spanning from Nike.
+            <a class="readmore-link">Read More</a>
+        </div>
+        <div class="talents-links">
+            <a>Instagram <img src="img/insta-link.svg"></a>
+            <a>Bookings and enquiries<img src="img/insta-link.svg"></a>
+        </div>
+      </div>
+     
+      </section>
+      <footer>
+        <ul>
+            <li class="grey mb10">Models</li>
+            <li>Boys</li>
+            <li>Girls</li>
+            <li>Other</li>
+        </ul>
+        <ul>
+            <li class="grey mb10">Talents</li>
+            <li>Art and design</li>
+            <li>Hair and makeup</li>
+            <li>Photographer</li>
+            <li>Stylist</li>
+            <li>Videographer</li>
+        </ul>
+        <ul>
+            <li class="grey mb10">Projects</li>
+            <li>Casting</li>
+            <li>Digital campaigns</li>
+            <li>Recruitment</li>
+        </ul>
+        <ul>
+            <li class="grey mb10">Contact</li>
+            <li>Enquire now</li>
+            <li class="mb10">Become a model</li>
+            <li class="grey desk-only">About</li>
+        </ul>
+        <ul class="mob-only">
+            <li class="grey mb10">About</li>
+        </ul>
+        <ul class="ml-auto">
+            <li class="mb10 grey">Follow us on </li>
+            <li class="social-icons">
+                <span><img src="img/insta.svg" alt=""></span>
+                <span><img src="img/tumblr.svg" alt=""></span>
+                <span><img src="img/youtube.svg" alt=""></span>
+            </li>
+        </ul>
+    </footer>
+    <script>
+        $(document).ready(function(){
+            $(".talents-details-link-list ul li").click(function(){
+                if($(this).hasClass("active")){
+                    $(this).removeClass("active"); 
+                }
+                else{
+                    $(this).addClass("active");
+                }
+            })
+        })
+    </script>
+</body>
+</html>
