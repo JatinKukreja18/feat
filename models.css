@@ -225,7 +225,7 @@ header.secondary{
 .talents-details-readmore-cont{
   font-size: 16px;
 }
-.talents-details-readmore-cont .readmore-link{
+ .readmore-link{
   margin-top: 20px;
   font-size: 18px;
   text-decoration: underline;
@@ -267,6 +267,41 @@ header.secondary{
 }
   .screen-height{
     /* height: 100vh; */
+  }
+
+
+  /*****PRoject CSS*****/
+  .project-gallery .row-one{
+    padding: 10px;
+    display:flex;
+    justify-content: space-between;
+  }
+  .project-gallery .row-one .gal-image{
+    margin-right: 10px;
+    display: inline-block;
+    width: 25%;
+  }
+  .project-gallery .row-one .gal-image img{
+    height: 460px;
+  }
+  .project-gallery .row-one .gal-image:last-child{
+    margin-right: 0px;
+    width: 50%;
+  }
+  .projects-about{
+    padding: 50px 25px;
+  }
+  .projects-about .desc .long-text{
+    width: 46%;
+    margin-top: 27px;
+    margin-bottom: 20px;
+    font-family: "NeueHaasDisplayRoman", Sans-serif;
+  }
+  .projects-about .desc .heading{
+    margin-top: 27px;
+  }
+  .projects-about .desc .heading b{
+    font-family: "NeueHaasDisplayBold", Sans-serif;
   }
   @media screen and (max-width:768px) {
     .container.model-interior .right-half {
@@ -330,5 +365,31 @@ header.secondary{
         position: absolute;
         top: 380px;
         margin-top: 0;
+      }
+
+
+      /*Project css*/
+      .talents-interior.projects{
+        position: relative;
+      }
+      .project-gallery .row-one{
+        display: block;
+      }
+      .project-gallery .row-one .gal-image{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 5px;
+      }
+
+      .project-gallery .row-one .gal-image:last-child,.projects-about .desc .long-text{
+        width: 100%;
+       
+      }
+      .project-gallery .row-one .gal-image:last-child img{
+        height: 252px;
+      }
+      .projects-about a.back{
+        position: absolute;
+        top: -300px;
       }
   }

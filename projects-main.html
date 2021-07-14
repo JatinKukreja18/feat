@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="models.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header class="secondary">
+        <span class="logo featonly"><a href="index.html"><img src="img/feat-logo.png" alt=""></a></span>
+        <span class="model-name uppercase">Sabyasachi X HnM For Vogue India</span>
+            <ul class="breadcrumb">
+              
+                <li>
+                    <a href="#">
+                        Projects
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#">
+                        Casting
+                    </a>
+                </li>
+            </ul>
+        </span>
+        <span class="hamburger-icon"><img src="img/hamburger-icon.svg" alt=""></span>
+    </header>
+    <section class="container talents-interior projects">
+      <div class="talents-main-banner-cont">
+          <img class="full-width screen-height" src="img/projects-main.png">
+          <!-- <div class="content-over-image">
+            <div class="tag">Newly Launched</div>
+              <h1 onmouseover="runImageSlideshow(3)" onmouseout="stopImageSlideshow()">Title of project lorem ipsum dolor sit amet, consectetur adipiscing</h1>
+              <a onmouseover="runImageSlideshow(3)" onmouseout="stopImageSlideshow()">Discover</a>
+          </div> -->
+      </div>
+      <div class="project-gallery">
+          <div class="row-one">
+            <div class="gal-image">
+                <img class="full-width" src="img/project-1.jpg">
+            </div>
+            <div class="gal-image">
+                <img class="full-width" src="img/project-1.jpg">
+            </div>
+            <div class="gal-image">
+                <img class="full-width" src="img/project-1.jpg">
+            </div>
+          </div>
+      </div>
+
+      <div class="projects-about">
+          <a class="back"><img src="img/back-black.svg" style="margin-right: 7px;"> Back</a>
+          <div class="desc">
+           <p class="heading">Client  <b>Sabyasachi, Vogue</b> ; Year  <b>2020</b></p>
+            <div class="long-text">
+                A student of Srishti School of Art, Design and Technology in Bangalore in 2007, Bikramjit moved to Mumbai in 2008. Soon he started contributing to magazines like Elle, Vogue, Harper’s Bazaar, Marie Claire, Grazia, Rolling Stone, Verve and GQ India more recently shooting covers for all the publications.
+            </div>
+            <a class="readmore-link">Read more</a>
+          </div>
+      </div>
+     
+      </section>
+      <footer>
+        <ul>
+            <li class="grey mb10">Models</li>
+            <li>Boys</li>
+            <li>Girls</li>
+            <li>Other</li>
+        </ul>
+        <ul>
+            <li class="grey mb10">Talents</li>
+            <li>Art and design</li>
+            <li>Hair and makeup</li>
+            <li>Photographer</li>
+            <li>Stylist</li>
+            <li>Videographer</li>
+        </ul>
+        <ul>
+            <li class="grey mb10">Projects</li>
+            <li>Casting</li>
+            <li>Digital campaigns</li>
+            <li>Recruitment</li>
+        </ul>
+        <ul>
+            <li class="grey mb10">Contact</li>
+            <li>Enquire now</li>
+            <li class="mb10">Become a model</li>
+            <li class="grey desk-only">About</li>
+        </ul>
+        <ul class="mob-only">
+            <li class="grey mb10">About</li>
+        </ul>
+        <ul class="ml-auto">
+            <li class="mb10 grey">Follow us on </li>
+            <li class="social-icons">
+                <span><img src="img/insta.svg" alt=""></span>
+                <span><img src="img/tumblr.svg" alt=""></span>
+                <span><img src="img/youtube.svg" alt=""></span>
+            </li>
+        </ul>
+    </footer>
+    <script>
+        $(document).ready(function(){
+            $(".talents-details-link-list ul li").click(function(){
+                if($(this).hasClass("active")){
+                    $(this).removeClass("active"); 
+                }
+                else{
+                    $(this).addClass("active");
+                }
+            })
+        })
+    </script>
+</body>
+</html>
